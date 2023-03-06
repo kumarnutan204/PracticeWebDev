@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="pop()">POP</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="slice()">SLICE</button>
+</body>
+<script type="text/javascript">
+    /*
+    Methods or functions on Array
+    valueOf() = to print data of an array
+    isArray() = check if the variable is an array or not
+    concat() = join several arrays into one
+    indexOf() = Returns the primitive value of the specified object
+    join() = combine elements of an array into a single string and return the string
+    pop() = removes the last element of an array
+    push() = add new element at the end 
+    reverse() = sort elements in descending order
+    shift() = remove the first element of an array
+    slice() = pulls a copy of a portion of an array into a new array
+    */
+
+    var fruits = ["Mango","Apple","Pineapple","Banana"];
+    // var vegetables = ["Potato","Okra","Cauliflower"];
+    // var flag =Array.isArray(fruits);
+    // var flag = fruits.valueOf();//prints the value of the array
+    // var flag = fruits.join(" | "); //it prints the data after joining the values using the argument given ....here using "|" between Mango and Apple
+
+    // var shop = fruits.concat(vegetables);//concatenate the arrays ...vegetables after the fruits
+
+    // var index = shop.indexOf("Apple");//when not in the array then returns -1
+    // document.write("<h1>"+flag+"</h1>");
+    // document.write("<h1>"+index+"</h1>");
+    
+    var demo = fruits;
+    document.getElementById("res").innerHTML = demo;
+    function pop(){
+        demo.pop();
+        document.getElementById("res").innerHTML = demo;
+    }
+    function push(){
+        var x = prompt("Please enter a fruit","");
+        demo.push(x);
+        // demo.push("Orange");
+        document.getElementById("res").innerHTML = demo;
+    }
+    
+    function slice(){
+        var y = demo.slice(2);//here it will cut everything before index 2
+        // if (1,2) as argument then it slices 1 and then 2 more
+        document.getElementById("res").innerHTML = y;
+    }
+
+</script>
+</html>
